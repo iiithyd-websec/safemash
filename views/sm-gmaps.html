@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+	<style>
+		#divGmap{ height: 300px; }
+		#map-canvas { height: 100% }
+	</style>
+ </head>
+  <body>
+	<div id="divGmap">
+		<div id="map-canvas"></div>
+	</div>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhBW4dZ5zEj7MSe9YFTvqDGniPM2rFLpc&sensor=true"></script>
+	<script type="text/javascript" src="javascripts/yamJS/googleMaps.js"></script>
+	<script type="text/javascript" src="javascripts/safemashJS/safemash.js"></script>
+	
+  <script type="text/javascript">
+	//window.addEventListener("message", receiveMessage, false);
+	//$w.receive({from: 'http://localhost:3000'});
+	//$w.receive({callback: receiveMessage});
+	//var parentOrigin = top.location.origin;
+	//console.log('gmaps topOrigin: ', parentOrigin);
+	
+	var allowedOrigins=['http://localhost:3000','http://safemash.herokuapp.com'];
+	$m.receive({from:allowedOrigins ,callback: receiveMessage});
+	
+	function receiveMessage(event){
+		//console.log('sm-gmaps receiveMessage: ', event.data);
+		gMapCodeAddress(event.data);
+	}
+  </script>
+  </body>
+</html>

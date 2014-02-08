@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Safe Mash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Krishna Chaitanya Telikicherla">
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+	<link href="stylesheets/custom.css" rel="stylesheet">
+	<style>
+		#divIfrWrap{
+			position: relative;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+		}
+		#divIfrWrap iframe {
+			width: 100%;
+			height: 100%;
+			border: 0;
+		}
+	</style>
+ </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Safe Mash</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+			  <li class="active"><a href="/safemash">Safe-Mash</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="http://www.programmableweb.com/apis/directory/1?sort=mashups" target="_blank">Programmable Web</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+		<input type="hidden" id="hdnBaseUrl" value='<%- baseUrl %>'/>
+		<div class="page-header">
+		  <h1>Safe-Mash <small>A library for ensuring privilege separation and secure interactions in web mashups.</small></h1>
+		</div>
+
+ 		  <ul class="thumbnails">
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Google maps</h3>
+			  <div class="tnContent">
+				<div id="divGmap"></div>
+			  </div>
+			</div>
+		  </li>
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Flickr</h3>
+			  <div class="tnContent">
+				<div id="divFlickr"></div>
+			  </div>
+			</div>
+		  </li>
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Customize</h3>
+			  <div class="tnContent">
+				<div id="divCustomize">
+					
+				</div>
+			  </div>
+			</div>
+		  </li>
+		</ul>
+	  
+		<hr>
+
+		<footer>
+		<p>&copy; IIIT Hyderabad, 2014</p>
+		</footer>
+
+    </div> 
+	
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/safemashJS/safemash.js"></script>
+	<script type="text/javascript" src="javascripts/safemashJS/custom.js"></script>
+  </body>
+
+</html>

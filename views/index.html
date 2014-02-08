@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Safe Mash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Krishna Chaitanya Telikicherla">
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+	<link href="stylesheets/custom.css" rel="stylesheet">
+ </head>
+
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Yet Another Mashup</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+			  <li><a href="/safemash">Safe-Mash</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="http://www.programmableweb.com/apis/directory/1?sort=mashups" target="_blank">Programmable Web</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+		<div class="page-header">
+		  <h1>Yet Another Mashup <small>An interactive web mashup with no privilege separation</small></h1>
+		</div>
+
+ 		  <ul class="thumbnails">
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Google maps</h3>
+			  <div class="tnContent">
+				<div id="map-canvas"></div>
+			  </div>
+			</div>
+		  </li>
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Flickr</h3>
+			  <div class="tnContent">
+				<div id="flickr-canvas"></div>
+			  </div>
+			</div>
+		  </li>
+		  <li class="span5">
+			<div class="thumbnail">
+			  <h3>Customize</h3>
+			  <div class="tnContent">
+				<div id="divPanel">
+				  <p>Customize the content in other widgets from this space!</p>
+				  <input id="address" type="textbox" placeholder="Enter any place (e.g., vizag)" value="vizag">
+				  <input id="btnCustomize" type="button" value="Geocode">
+				</div>
+			  </div>
+			</div>
+		  </li>
+		</ul>
+	  
+		<hr>
+
+		<footer>
+		<p>&copy; IIIT Hyderabad, 2014</p>
+		</footer>
+
+    </div> 
+	
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/yamJS/loadFlickr.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhBW4dZ5zEj7MSe9YFTvqDGniPM2rFLpc&sensor=true"></script>
+	<script type="text/javascript" src="javascripts/yamJS/googleMaps.js"></script>
+	<script type="text/javascript" src="javascripts/yamJS/customize.js"></script>
+  </body>
+</html>

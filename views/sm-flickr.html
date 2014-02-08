@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+ </head>
+  <body>
+	<div id="flickr-canvas"></div>
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/yamJS/loadFlickr.js"></script>
+	<script type="text/javascript" src="javascripts/safemashJS/safemash.js"></script>
+	
+	<script type="text/javascript">
+		var allowedOrigins=['http://localhost:3000','http://safemash.herokuapp.com'];
+		$m.receive({from:allowedOrigins ,callback: receiveMessage});
+		function receiveMessage(event){
+			showpics(event.data);
+		}
+		$m.applyCSP("img-src http://*.flickr.com");
+	</script>
+  </body>
+</html>

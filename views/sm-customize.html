@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+ </head>
+  <body>
+	<p>Customize the content in other widgets from this space!</p>
+    <input id="address" type="textbox" placeholder="Enter any place (e.g., vizag)" value="vizag">
+    <input id="btnCustomize" type="button" value="Geocode">
+	<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+	<script type="text/javascript" src="javascripts/safemashJS/safewidget.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCustomize').click(function(){
+				var address=$('#address').val();
+				$w('#gmapsWidget').send({message: address});
+				$w('#flickrWidget').send({message: address});
+				
+				/*
+				Test: The below code will throw the following error, due to SOP restrictions:
+				"Uncaught SecurityError: Blocked a frame with origin "http://localhost:3000" from accessing 
+				 a frame with origin "http://localhost:3100". Protocols, domains, and ports must match."
+				*/
+				//var ifrWidgetGmap = top.document.getElementById('gmapsWidget').contentWindow;
+				//console.log('ifrWidgetGmap: ', ifrWidgetGmap.document.getElementsByTagName('link')[0]);
+			});
+		});
+	</script>
+  </body>
+</html>
