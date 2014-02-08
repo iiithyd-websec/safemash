@@ -26,6 +26,11 @@
 			var widgetId= options.id || Math.floor((Math.random()*1000)+1);
 			var sandboxFlags = options.sandboxFlags || 'allow-scripts';
 			if(options.loadPage){
+				if(sandboxFlags.indexOf("allow-scripts") != -1 && sandboxFlags.indexOf("allow-same-origin")!= -1){
+					var msg="Setting the flags 'allow-scripts' and 'allow-same-origin' for a sandboxed iframe could be dangerous. "+
+					"Check http://www.w3.org/TR/html5/embedded-content-0.html#the-iframe-element for details.";
+					console.warn(msg);
+				}
 				//sandbox="allow-scripts allow-same-origin"
 				var widget='<div id="divIfrWrap">'+
 				'<iframe sandbox="'+sandboxFlags+'" id="'+widgetId+'"'+
