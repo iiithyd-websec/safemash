@@ -20,3 +20,6 @@ SafeMash is a JavaScript library to create safer mashups. This repo contains sou
 
 ## View demo: [http://safemash.herokuapp.com](http://safemash.herokuapp.com)
 The homepage shows a mashup built without any privilege separation. Clicking the link "SafeMash" in the top menu takes to the mashup rebuilt using SafeMash.
+
+### Related
+Checkout our code for [Recursive Mashup Attack](https://github.com/novogeek/Recursive-Mashup-Attack/tree/nodeJs). It arises due to insecure use of HTML5 postMessage API. 
